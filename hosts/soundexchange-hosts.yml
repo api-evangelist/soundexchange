@@ -1,0 +1,85 @@
+generated: '2026-09-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 6
+  own: 6
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.soundexchange.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: soundexchange.com
+  role: api
+  relation: own
+- host: isrc.soundexchange.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: soundexchange.com
+  role: other
+  relation: own
+- host: licenseedirect.soundexchange.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: soundexchange.com
+  role: other
+  relation: own
+- host: soundexchange.com
+  found_by:
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: soundexchange.com
+  role: other
+  relation: own
+- host: sxdirect.soundexchange.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: soundexchange.com
+  role: other
+  relation: own
+- host: www.soundexchange.com
+  found_by:
+  - pointer
+  - vendor-detect
+  types:
+  - Newsroom
+  - Website
+  - Documentation
+  - GettingStarted
+  - Support
+  - Blog
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - cdn
+  - hosting
+  vendor: cloudflare
+  registrable_domain: soundexchange.com
+  role: website
+  relation: own

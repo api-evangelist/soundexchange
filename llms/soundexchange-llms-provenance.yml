@@ -1,0 +1,6 @@
+generated: '2026-09-22'
+method: probed
+generator: harvest-llms.py
+source: https://www.soundexchange.com/llms.txt
+bytes: 7429
+note: saved verbatim; the provider's own document

@@ -1,23 +1,81 @@
 aid: soundexchange
+
 name: SoundExchange
-description: 'SoundExchange is a company surfaced via the API Evangelist harvest backlog (source: music)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.soundexchange.com/wp-content/uploads/2022/12/generic-SX.jpg
+
+description: 'SoundExchange is a non‑profit collective rights organization that collects and distributes digital performance royalties on behalf of sound recording owners and performers. It ensures that artists, record labels, and rights holders receive fair compensation when their music is streamed, broadcast, or otherwise publicly performed across digital platforms. By operating a transparent and efficient royalty distribution system, SoundExchange supports the sustainability of the music ecosystem and promotes the value of creative works in the modern digital landscape.'
+
 url: https://raw.githubusercontent.com/api-evangelist/soundexchange/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:music
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-22'
+
 modified: '2026-09-22'
+
 tags:
 - Company
-apis: []
+- Nonprofit
+- Royalties
+- Music
+- Digital
+- Rights
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/soundexchange-llms.txt
+- type: Hosts
+  url: hosts/soundexchange-hosts.yml
+- type: Vendors
+  url: vendors/soundexchange-vendors.yml
+- type: Newsroom
+  url: https://www.soundexchange.com/news/soundexchange-named-one-of-fast-companys-worlds-most-innovative-companies-for-2023/
+- type: DomainSecurity
+  url: security/soundexchange-domain-security.yml
 - type: Website
-  url: https://soundexchange.com/
+  url: https://www.soundexchange.com/
+- type: Documentation
+  url: https://www.soundexchange.com/who-we-are/
+- type: GettingStarted
+  url: https://www.soundexchange.com/register/
+- type: Support
+  url: https://www.soundexchange.com/contact/
+- type: Blog
+  url: https://www.soundexchange.com/newsletter/
+- type: TermsOfService
+  url: https://www.soundexchange.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.soundexchange.com/privacy-policy/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: SoundExchange provides no public developer program or API documentation; attempts to fetch OpenAPI spec returned 403 and API reference page returned 404.
+  evidence:
+    - url: https://api.soundexchange.com/openapi.json
+      status: 403
+    - url: https://www.soundexchange.com/api
+      status: 404
+  checked: 2026-09-22
+x-enrichment:
+  date: '2026-09-22'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
