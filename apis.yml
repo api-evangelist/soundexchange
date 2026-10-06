@@ -19,7 +19,7 @@ specificationVersion: '0.20'
 
 created: '2026-09-22'
 
-modified: '2026-09-22'
+modified: '2026-10-06'
 
 tags:
 - Company
@@ -43,6 +43,8 @@ maintainers:
   email: info@apis.io
 
 common:
+- url: https://www.soundexchange.com/feed/
+  type: BlogRSS
 - type: LLMsTxt
   url: llms/soundexchange-llms.txt
 - type: Hosts
